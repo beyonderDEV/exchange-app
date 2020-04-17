@@ -11,7 +11,7 @@ const StockSchema = new Schema({
   name: {
     type: String,
     required: true
-  },
+  }, 
   distribution_law : {
     type: String,
     required: true

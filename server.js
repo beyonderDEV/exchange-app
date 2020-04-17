@@ -11,7 +11,7 @@ app.use(
   bodyParser.urlencoded({
     extended: false
   })
-)
+) 
 
 const mongoURI = 'mongodb://localhost:27017/db'
 

@@ -11,7 +11,7 @@ stocks.use(cors())
 
 stocks.get('/', (req, res) =>{
     Stock.find((err, data) => {
-        if (!err) { res.send(data); }
+        if (!err) { res.send(data); } 
         else{
             console.log('Error getting stocks : ' + JSON.stringify(err, undefined, 2));
         }
