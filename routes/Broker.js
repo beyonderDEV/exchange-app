@@ -35,7 +35,7 @@ brokers.get('/:id', (req, res) => {
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send(`No record with given id : ${req.params.id}`);
 
-    Employee.findById(req.params.id, (err, data) => {
+    Broker.findById(req.params.id, (err, data) => {
         if (!err) { res.send(data); }
         else { console.log('Error in Retriving Employee :' + JSON.stringify(err, undefined, 2)); }
     });

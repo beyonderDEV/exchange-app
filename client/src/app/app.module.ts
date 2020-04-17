@@ -11,13 +11,16 @@ import { RegisterComponent } from './register/register.component'
 import { HomeComponent } from './home/home.component'
 import { AuthenticationService } from './authentication.service'
 import { AuthGuardService } from './auth-guard.service';
-import { BrokerComponent } from './brokers/broker/broker.component'
+import { BrokerComponent } from './brokers/broker/broker.component';
+import { StockComponent } from './stocks/stock/stock.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'brokers', component: BrokerComponent },
+  { path: 'stocks', component: StockComponent },
   {
     path: 'profile',
     component: ProfileComponent,
@@ -32,13 +35,15 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    BrokerComponent
+    BrokerComponent,
+    StockComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule
   ],
   providers: [AuthenticationService, AuthGuardService],
   bootstrap: [AppComponent]

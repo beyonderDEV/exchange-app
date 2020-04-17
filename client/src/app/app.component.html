@@ -22,6 +22,9 @@
         <a class="nav-link" routerLink="/brokers">Brokers</a>
       </li>
       <li *ngIf="auth.isLoggedIn()" class="nav-item">
+        <a class="nav-link" routerLink="/stocks">Stocks</a>
+      </li>
+      <li *ngIf="auth.isLoggedIn()" class="nav-item">
         <a class="nav-link" routerLink="" (click)="auth.logout()">Logout</a>
       </li>
 
